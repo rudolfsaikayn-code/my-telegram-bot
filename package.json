@@ -4,9 +4,21 @@
   "description": "Мой Telegram бот",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js"
+    "start": "node bot.js",
+    "dev": "nodemon bot.js",  // удобная команда для разработки (автоперезапуск при изменениях)
+    "test": "echo \"Tests coming soon!\""  // шаблон для тестов
   },
   "dependencies": {
-    "node-telegram-bot-api": "^0.67.0"
-  }
+    "node-telegram-bot-api": "^0.67.0",
+    "node-cron": "^3.0.0"  // добавлен недостающий пакет
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"  // только для разработки, автоматически перезапускает скрипт
+  },
+  "engines": {
+    "node": ">=14.18.0"  // укажите вашу версию Node.js
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": ["telegram", "bot", "nodejs"]
 }
